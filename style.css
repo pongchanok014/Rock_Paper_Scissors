@@ -1,0 +1,39 @@
+* {
+  padding : 0;
+  margin : 0;
+}
+
+html , body {
+  text-align: center;
+  background-color: antiquewhite;
+}
+
+h1 {
+  margin: 10px auto;
+}
+
+
+.button-wrapper {
+  display: inline;
+}
+
+button {
+  margin : 0 10px 20px 10px;
+  height: 30px;
+  width: 120px;
+}
+
+#computerMove {
+  margin-bottom: 20px;
+}
+
+
+.point {
+  margin : 30px auto;
+}
+
+#reset {
+  background-color: red;
+  width: 50px;
+  margin: 0 auto;
+}
