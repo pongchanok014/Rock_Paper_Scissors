@@ -2,6 +2,8 @@ let rock = document.getElementById('rock');
 let paper = document.getElementById('paper');
 let scissors = document.getElementById('scissors');
 
+let scoreBoard = document.querySelector('.point');
+scoreBoard.setAttribute('class' , 'score-board')
 
 let nextRound = document.getElementById('nextRound');
 let reset= document.getElementById('reset')
@@ -34,12 +36,12 @@ rock.onclick = () =>{
   pcImageShow.src = rps[computerMove];
   if (userMove === moves[computerMove] ){
     document.getElementById('winner').innerText = "Result : This game was a tie!";
-    document.getElementById('userPoint').innerText = "User Point : " + userPoint;
+    document.getElementById('userPoint').innerText = "Your Point : " + userPoint;
     document.getElementById('computerPoint').innerText = "Computer Point : " + computerPoint;
   } else if (moves[computerMove] === 'Paper'){
     document.getElementById('winner').innerText = "Result : Computer Win!";
     computerPoint++;
-    document.getElementById('userPoint').innerText = "User Point : " + userPoint;
+    document.getElementById('userPoint').innerText = "Your Point : " + userPoint;
     document.getElementById('computerPoint').innerText = "Computer Point : " + computerPoint;
   } else if (moves[computerMove] === 'Scissors') {
     document.getElementById('winner').innerText = "Result : You Win!";
@@ -59,17 +61,17 @@ paper.onclick = () =>{
   pcImageShow.src = rps[computerMove];
   if (userMove === moves[computerMove]){
     document.getElementById('winner').innerText = "Result : This game was a tie!";
-    document.getElementById('userPoint').innerText = "User Point : " + userPoint;
+    document.getElementById('userPoint').innerText = "Your Point : " + userPoint;
     document.getElementById('computerPoint').innerText = "Computer Point : " + computerPoint;
   } else if (moves[computerMove] === 'Scissors'){
     document.getElementById('winner').innerText = "Result : Computer Win!";
     computerPoint++;
-    document.getElementById('userPoint').innerText = "User Point : " + userPoint;
+    document.getElementById('userPoint').innerText = "Your Point : " + userPoint;
     document.getElementById('computerPoint').innerText = "Computer Point : " + computerPoint;
   } else if (moves[computerMove] === 'Rock'){
     document.getElementById('winner').innerText = "Result : You Win!";
     userPoint++;
-    document.getElementById('userPoint').innerText = "User Point : " + userPoint;
+    document.getElementById('userPoint').innerText = "Your Point : " + userPoint;
     document.getElementById('computerPoint').innerText = "Computer Point : " + computerPoint;
   }
   reset.hidden = false;
@@ -83,17 +85,17 @@ scissors.onclick = () =>{
   pcImageShow.src = rps[computerMove];
   if (userMove === moves[computerMove]){
     document.getElementById('winner').innerText = "Result : This game was a tie!";
-    document.getElementById('userPoint').innerText = "User Point : " + userPoint;
+    document.getElementById('userPoint').innerText = "Your Point : " + userPoint;
     document.getElementById('computerPoint').innerText = "Computer Point : " + computerPoint;
   } else if (moves[computerMove] === 'Rock'){
     document.getElementById('winner').innerText = "Result : Computer Win!";
     computerPoint++;
-    document.getElementById('userPoint').innerText = "User Point : " + userPoint;
+    document.getElementById('userPoint').innerText = "Your Point : " + userPoint;
     document.getElementById('computerPoint').innerText = "Computer Point : " + computerPoint;
   } else if (moves[computerMove] === 'Paper'){
     document.getElementById('winner').innerText = "Result : You Win!";
     userPoint++;
-    document.getElementById('userPoint').innerText = "User Point : " + userPoint;
+    document.getElementById('userPoint').innerText = "Your Point : " + userPoint;
     document.getElementById('computerPoint').innerText = "Computer Point : " + computerPoint;
   }
   reset.hidden = false;
@@ -116,7 +118,7 @@ reset.onclick = () => {
   rock.hidden =false;
   userPoint = 0;
   computerPoint = 0;
-  document.getElementById('userPoint').innerText = "User Point : " + 0;
+  document.getElementById('userPoint').innerText = "Your Point : " + 0;
   document.getElementById('computerPoint').innerText = "Computer Point : " + 0;
   pcImageShow.src = "https://image.flaticon.com/icons/png/512/36/36601.png";
   document.getElementById('winner').innerText = "Result : ";
